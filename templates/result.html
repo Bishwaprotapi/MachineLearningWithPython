@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Insurance Cost Prediction</h1>
+        <div class="result-card">
+            <h2>Predicted Insurance Cost: <span class="prediction">{{ prediction }}</span></h2>
+            
+            <h3>Input Details:</h3>
+            <ul>
+                <li>Age: {{ age }}</li>
+                <li>Sex: {{ sex }}</li>
+                <li>BMI: {{ bmi }}</li>
+                <li>Children: {{ children }}</li>
+                <li>Smoker: {{ smoker }}</li>
+                <li>Region: {{ region }}</li>
+            </ul>
+        </div>
+        <a href="{{ url_for('home') }}" class="back-button">Make Another Prediction</a>
+    </div>
+</body>
+</html> 
